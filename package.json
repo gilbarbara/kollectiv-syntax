@@ -1,0 +1,19 @@
+{
+  "name": "kollectiv-syntax",
+  "theme": "syntax",
+  "version": "0.1.0",
+  "description": "Another dark theme with cool colors",
+  "keywords": [
+    "syntax",
+    "theme"
+  ],
+	"author": "Gil Barbara <gilbarbara@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gilbarbara/kollectiv-syntax.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
