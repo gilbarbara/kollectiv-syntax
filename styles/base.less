@@ -1,6 +1,6 @@
 @import "syntax-variables";
 
-atom-text-editor, :host {
+atom-text-editor {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
 
@@ -62,11 +62,11 @@ atom-text-editor .search-results .marker.current-result .region,
   border: 1px solid @syntax-result-marker-color-selected;
 }
 
-.comment {
+.syntax--comment {
   color: @light-gray;
 }
 
-.entity {
+.syntax--entity {
   &.name.type {
     color: @yellow-light;
     text-decoration: underline;
@@ -77,7 +77,7 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 }
 
-.keyword {
+.syntax--keyword {
   color: @yellow;
 
   &.control {
@@ -101,7 +101,7 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 }
 
-.storage {
+.syntax--storage {
   color: @yellow-light;
 
   &.doc {
@@ -109,7 +109,7 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 }
 
-.constant {
+.syntax--constant {
   color: @yellow-light;
 
   &.character.escape {
@@ -139,7 +139,7 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 }
 
-.variable {
+.syntax--variable {
   color: @red;
 
   &.interpolation {
@@ -159,12 +159,12 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 }
 
-.invalid.illegal {
+.syntax--invalid.syntax--illegal {
   background-color: @red;
   color: @syntax-background-color;
 }
 
-.string {
+.syntax--string {
   color: @blue-light;
 
   &.quoted {
@@ -184,7 +184,7 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 }
 
-.punctuation {
+.syntax--punctuation {
 
   &.separator {
     color: @blue-light;
@@ -223,7 +223,7 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 }
 
-.support {
+.syntax--support {
   &.class {
     color: @yellow-light;
   }
@@ -245,7 +245,7 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 }
 
-.entity {
+.syntax--entity {
   &.name.function {
     color: @cyan;
   }
@@ -272,7 +272,7 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 }
 
-.meta {
+.syntax--meta {
   &.class {
     color: @yellow-light;
   }
@@ -302,11 +302,11 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 }
 
-.none {
+.syntax--none {
   color: @syntax-text-color;
 }
 
-.markup {
+.syntax--markup {
   &.bold {
     color: @red-light;
     font-weight: bold;
@@ -346,14 +346,13 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 }
 
-.source.gfm .markup {
+.syntax--source.syntax--gfm .syntax--markup {
   -webkit-font-smoothing: auto;
   &.heading {
     color: @blue;
   }
 }
 
-atom-text-editor[mini] .scroll-view,
-:host([mini]) .scroll-view {
+atom-text-editor[mini] .scroll-view {
   padding-left: 1px;
 }
